@@ -69,7 +69,6 @@
 }
 
 .picclick .tip {
-
   margin-top: 130rpx;
   font-size: 13px;
   color: gray;
@@ -173,6 +172,7 @@ navigator {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .picconfirm .picclick {
@@ -256,4 +256,7 @@ navigator {
   border-radius: 60rpx;
   border: 1px solid #4675f9;
   color: #4675f9;
+}
+.scoll-h{
+  height: 95%;
 }

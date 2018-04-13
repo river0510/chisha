@@ -59,10 +59,9 @@
             <button class="confirm">就吃这个</button>
           </view>
           <view class='egranking sw2'>
-            <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
+             <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
               <view class="item-ans">
                 <view class="avatar">
-                  <!-- <image class="img" src="pages/img/logo/allStore.jpg"></image> -->
                 </view>
                 <view class="expertInfo">
                   <view class="name">店名</view>
@@ -71,12 +70,11 @@
                 </view>
                 <navigator url="/pages/askExpert/expertDetail" class="askBtn">￥1</navigator>
               </view>
-            </block>
+            </block> 
           </view>
         </view>
       </scroll-view>
     </swiper-item>
   </swiper>
-
 
 </view>
