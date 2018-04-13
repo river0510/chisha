@@ -1,0 +1,113 @@
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70rpx;
+  border-bottom: 0.1rpx solid gainsboro;
+  background-color: white;
+  z-index: 99; 
+}
+
+.title-text {
+  font-size: 15px;
+}
+
+.firstPick {
+  width: 100%;
+  margin: 40rpx 0 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.firstPick .img {
+  width: 350rpx;
+  height: 350rpx;
+  z-index: 99;
+}
+
+.firstPick .imgs {
+  position: absolute;
+  top: 140rpx;
+  width: 210rpx;
+  height: 210rpx;
+  border: 1px solid black;
+  border-radius: 400rpx;
+}
+
+.firstName {
+  font-size: 18px;
+  font-weight: 580;
+  color: #60605f;
+  letter-spacing: 5rpx;
+}
+
+.firstNum {
+  font-size: 18px;
+  color: #6bb82c;
+  letter-spacing: 3rpx;
+}
+
+.itemall {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.item-ans {
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 400rpx;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  border-radius: 10rpx;
+  margin: 18rpx 8rpx;
+}
+
+.ranking {
+  font-size: 28px;
+  color: #6bb82c;
+  position: absolute;
+  margin-top: -32rpx;
+  margin-left: 10rpx;
+}
+
+.space {
+  width: 30%;
+  height: 60%;
+  margin: 0;
+}
+
+.item-ans .img {
+  width: 63%;
+  height: 60%;
+  margin: 20rpx 10rpx 0 0;
+}
+
+.expertInfo {
+  margin-left: 20rpx;
+  font-size: 12px;
+  flex-grow: 2;
+  color: #b0b0b0;
+  line-height: 1.3em;
+}
+
+.expertInfo .name {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.times {
+  font-size: 15px;
+  color: #6bb82c;
+  margin-right: 20rpx;
+}
+
+.scoll-h {
+  height: 100%;
+  /* margin-top: 5rpx; */
+}

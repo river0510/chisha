@@ -1,0 +1,259 @@
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70rpx;
+  border-bottom: 0.1rpx solid gainsboro;
+  background-color: white;
+  z-index: 99;
+}
+
+.title-text {
+  font-size: 15px;
+}
+
+.tab-h {
+  margin-top: 10rpx;
+  height: 100rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  font-size: 18px;
+  white-space: nowrap;
+  /* position: fixed; */
+  top: 0;
+  z-index: 99;
+  text-align: center;
+}
+
+.tab-item {
+  margin: 0 100rpx;
+  display: inline-block;
+}
+
+.tab-item.active {
+  color: #efb336;
+  position: relative;
+}
+
+.tab-item.active:after {
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 52rpx;
+  background: #efb336;
+  position: absolute;
+  bottom: 0;
+  left: 5rpx;
+  border-radius: 16rpx;
+}
+
+.sw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100%;
+}
+
+.picclick {
+  border: 1px solid whitesmoke;
+  background-color: white;
+  border-radius: 4rpx;
+  width: 92%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.picclick .tip {
+
+  margin-top: 130rpx;
+  font-size: 13px;
+  color: gray;
+  /* border: 1px solid black; */
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.picclick swiper {
+  width: 330rpx;
+  height: 330rpx;
+  overflow: hidden;
+  position: relative;
+}
+.picclick .mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 330rpx;
+  height: 330rpx;
+  z-index: 100;
+}
+
+.picclick image {
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 350rpx;
+}
+
+navigator {
+  width: 30%;
+}
+
+.confirm {
+  width: 100%;
+  height: 70rpx;
+  background-color: transparent;
+  border-color: #6bb82c;
+  font-size: 17px;
+  line-height: 2;
+  margin-top: 60rpx;
+}
+
+.sw2 {
+  width: 92%;
+  border: 1px solid whitesmoke;
+  border-radius: 7rpx;
+  margin: 5rpx;
+  background-color: white;
+}
+
+.condition .conpad {
+  padding: 15rpx;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.condition .conpad view {
+  margin: 11rpx;
+  width: 120rpx auto;
+  padding: 10rpx 21rpx 10rpx 21rpx;
+  font-size: 14px;
+  border: 0.5rpx solid whitesmoke;
+  border-radius: 4rpx;
+  background-color: #fcfcfc;
+}
+
+.condition .conpad .ope {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  flex-grow: 2;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.ope .edit {
+  margin: 0;
+  margin-top: 3rpx;
+  background-color: #efb336;
+  color: white;
+  line-height: 2.1;
+  height: 55rpx;
+  width: 140rpx;
+  font-size: 27rpx;
+  letter-spacing: 3rpx;
+}
+
+.conpad .ope .card {
+  margin: 0;
+  color: #efb336;
+  background-color: transparent;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  border-color: transparent;
+  -webkit-tap-highlight-color: #f9db78;
+}
+
+.picconfirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.picconfirm .picclick {
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 30rpx;
+}
+
+.picconfirm .confirm {
+  margin-bottom: 30rpx;
+  width: 28%;
+  height: 60rpx;
+  font-size: 16px;
+  margin-top: 35rpx;
+}
+
+.sw2 .picclick {
+  background-color: whitesmoke;
+  border-radius: 300rpx;
+}
+
+.sw2 .picclick view {
+  text-align: center;
+  margin-top: 130rpx;
+  font-size: 35rpx;
+  letter-spacing: 4rpx;
+  color: black;
+}
+
+.item-ans {
+  width: 100%;
+  display: flex;
+  flex-grow: row no-wrap;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+  height: 180rpx;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  padding-right: 30rpx;
+}
+
+.avatar .img {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar .doyen {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: -2px;
+  right: 20rpx;
+}
+
+.expertInfo {
+  font-size: 12px;
+  flex-grow: 2;
+  color: #b0b0b0;
+  line-height: 1.5em;
+}
+
+.expertInfo .name {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.askBtn {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 60rpx;
+  border: 1px solid #4675f9;
+  color: #4675f9;
+}

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/allStore/index",
+    "pages/history/index",
+    "pages/personal/index",
+    "pages/storeDetail/index",
+    "pages/conditionChoice/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#f9db78",
+    "borderStyle": "#fff",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/logo/homePage.png",
+        "selectedIconPath": "img/logo/homePageClick.png",
+        "text": "随机"
+      },
+      {
+        "pagePath": "pages/allStore/index",
+        "iconPath": "img/logo/allStore.png",
+        "selectedIconPath": "img/logo/allStoreClick.png",
+        "text": "全部"
+      },
+      {
+        "pagePath": "pages/history/index",
+        "iconPath": "img/logo/history.png",
+        "selectedIconPath": "img/logo/historyClick.png",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "iconPath": "img/logo/personal.png",
+        "selectedIconPath": "img/logo/personalClick.png",
+        "text": "个人"
+      }
+    ]
+  }
+}

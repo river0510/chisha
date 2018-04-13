@@ -1,0 +1,29 @@
+<view>
+  <view class="title">
+    <view class="title-text">历史手账</view>
+    <view class="main-line"></view>
+  </view>
+
+  <scroll-view scroll-y="true" class="scoll-h">
+    <view class="firstPick">
+      <image class="imgs" src="../../img/store/zhss.jpg"></image>
+      <image class="img" src="../../img/else/hc.png"></image>
+      <view class="firstName">中华寿司</view>
+      <view class="firstNum">吃过N次</view>
+    </view>
+    <view class="itemall">
+      <block wx:for="{{[23456789]}} " wx:for-item="i">
+        <view class="item-ans">
+          <view class="ranking">{{i}}</view>
+          <view class='space'></view>
+          <image class="img " src="../../img/store/lyb.jpg "></image>
+          <view class="expertInfo ">
+            <view class="name ">店名</view>
+            <view class="add">地址</view>
+          </view>
+          <view class="times "><text>吃过\nN次</text></view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
