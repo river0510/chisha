@@ -11,7 +11,7 @@
     <swiper-item>
       <view class="sw">
         <view class='picclick'>
-          <view class="tip">点击图片开始/停下</view>
+          <view class="tip">点击按钮弹出店铺</view>
           <swiper current="1" autoplay='true' interval='90' indicator-dots="false" indicator-color="transparent" indicator-active-color='transparent' duration='0'>
             <swiper-item>
               <image src="../../img/store/lyb.jpg" class="slide-image" />
@@ -23,8 +23,10 @@
               <image src="../../img/store/njxd2.jpg" class="slide-image" />
             </swiper-item>
             <view class="mask"></view>
-          </swiper> 
-        <navigator url='../storeDetail/index' hover-class="none"><button class="confirm">就吃这个</button></navigator>
+          </swiper>
+          <navigator url='../storeDetail/index' hover-class="none">
+            <button class="confirm">就吃这个</button>
+          </navigator>
         </view>
       </view>
     </swiper-item>
@@ -34,17 +36,33 @@
           <view class="condition sw2">
             <view class="conpad">
               <block wx:for="{{condition}}">
-                <view>{{item.con}} ×</view>
+                <view>{{item.con}}</view>
               </block>
               <view class="ope">
-                <view class="card">〓</view>
-                <button class="edit">编辑✎</button>
+                <navigator url='../conditioncard/index' hover-class="none" style="width:70rpx;">
+                  <view class="card">〓</view>
+                </navigator>
+                <navigator url='../conditionChocie/index' hover-class="none" style="width:140rpx;">
+                  <button class="edit">编辑✎</button>
+                </navigator>
               </view>
             </view>
           </view>
           <view class="picconfirm sw2">
             <view class='picclick'>
               <swiper current="1" autoplay='true' interval='90' indicator-dots="false" indicator-color="transparent" indicator-active-color='transparent' duration='0'>
+                <swiper-item>
+                  <image src="../../img/store/lyb.jpg" class="slide-image" />
+                </swiper-item>
+                <swiper-item>
+                  <image src="../../img/store/zhss.jpg" class="slide-image" />
+                </swiper-item>
+                <swiper-item>
+                  <image src="../../img/store/njxd2.jpg" class="slide-image" />
+                </swiper-item>
+                <view class="mask"></view>
+              </swiper>
+              <!-- <swiper current="1" autoplay='true' interval='90' indicator-dots="false" indicator-color="transparent" indicator-active-color='transparent' duration='0'>
                 <swiper-item>
                   <view>那间小店</view>
                 </swiper-item>
@@ -54,12 +72,12 @@
                 <swiper-item>
                   <view>中华寿司</view>
                 </swiper-item>
-              </swiper>
+              </swiper> -->
             </view>
             <button class="confirm">就吃这个</button>
           </view>
           <view class='egranking sw2'>
-             <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
+            <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
               <view class="item-ans">
                 <view class="avatar">
                 </view>
@@ -68,9 +86,9 @@
                   <view class="tag">地址</view>
                   <view class="answerHistory">N人 </view>
                 </view>
-                <navigator url="/pages/askExpert/expertDetail" class="askBtn">￥1</navigator>
+                <navigator url="/pages/askExpert/expertDetail" class="askBtn">70%</navigator>
               </view>
-            </block> 
+            </block>
           </view>
         </view>
       </scroll-view>

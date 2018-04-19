@@ -4,7 +4,7 @@ Page({
     winHeight: "",//窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
-    condition: [{ con: "一人食" }, { con: "增肥" }, { con: "外卖" }, { con: "￥10-25" }]
+    condition: []
 
   },
   // 滚动切换标签样式

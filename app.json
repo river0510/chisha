@@ -6,7 +6,8 @@
     "pages/history/index",
     "pages/personal/index",
     "pages/storeDetail/index",
-    "pages/conditionChoice/index"
+    "pages/conditionChocie/index",
+    "pages/conditioncard/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

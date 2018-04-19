@@ -42,11 +42,11 @@
   content: "";
   display: block;
   height: 8rpx;
-  width: 52rpx;
+  width: 90rpx;
   background: #efb336;
   position: absolute;
   bottom: 0;
-  left: 5rpx;
+  left: 8rpx;
   border-radius: 16rpx;
 }
 
@@ -83,6 +83,10 @@
   overflow: hidden;
   position: relative;
 }
+.sw2 .picclick swiper {
+  width: 300rpx;
+  height: 300rpx;
+}
 .picclick .mask{
   position: absolute;
   top: 0;
@@ -96,6 +100,10 @@
   width: 330rpx;
   height: 330rpx;
   border-radius: 350rpx;
+}
+.sw2 .picclick image {
+  width: 300rpx;
+  height: 300rpx;
 }
 
 navigator {
@@ -248,14 +256,15 @@ navigator {
 }
 
 .askBtn {
-  width: 120rpx;
-  height: 60rpx;
-  line-height: 60rpx;
+  width: 100rpx;
+  height:100rpx;
+  line-height: 95rpx;
   text-align: center;
-  font-size: 14px;
-  border-radius: 60rpx;
-  border: 1px solid #4675f9;
-  color: #4675f9;
+  font-size: 15px;
+  border-radius: 200rpx;
+  border: 1px solid #efb336;
+  color: #efb336;
+  margin-right: 20rpx;
 }
 .scoll-h{
   height: 95%;
