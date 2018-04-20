@@ -7,7 +7,9 @@
     "pages/personal/index",
     "pages/storeDetail/index",
     "pages/conditionChocie/index",
-    "pages/conditioncard/index"
+    "pages/conditioncard/index",
+    "pages/line/index",
+    "pages/conditionCardEdit/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

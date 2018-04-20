@@ -4,21 +4,6 @@
   letter-spacing: 3rpx;
   margin: 45rpx 30rpx 20rpx 30rpx;
 }
-.yes{
-position:absolute;
-height:40rpx;
-width:110rpx;
-right:70rpx;
-top:45rpx;
-font-size:14px;
-border:1px solid seashell;
-border-radius:6rpx;
-padding:10rpx;
-color:#efb336;
-text-align:center;
-letter-spacing:4rpx;
-
-}
 
 .condition {
   padding: 15rpx;
@@ -45,11 +30,9 @@ letter-spacing:4rpx;
   background-color: transparent;
   border: 0;
 }
-
-.tab-content {
+.tab-content{
   margin-bottom: 60rpx;
 }
-
 .tab-h {
   margin-top: 10rpx;
   height: 100rpx;
@@ -86,13 +69,15 @@ letter-spacing:4rpx;
   left: 5rpx;
   border-radius: 16rpx;
 }
+.swiper{
+  
+}
 
 .titlexx {
   font-size: 17px;
   color: #60605f;
   letter-spacing: 2rpx;
   margin: 60rpx 0 20rpx 70rpx;
-  height: 40rpx;
 }
 
 .titlexxx {
@@ -100,20 +85,19 @@ letter-spacing:4rpx;
   color: #60605f;
   letter-spacing: 2rpx;
   margin: 70rpx 0 40rpx 70rpx;
-  height: 30rpx;
 }
 
 .tip {
   margin: 20rpx 70rpx 10rpx 70rpx;
   font-size: 14px;
   color: #60605f;
-  height: 50rpx;
 }
 
 .athadd {
-  width: 100%;
-  height: 450rpx;
-  margin: 0rpx 0 20rpx 0rpx;
+  width: 80%;
+  height: 300rpx;
+  background-color: seashell;
+  margin: 40rpx 0 20rpx 70rpx;
 }
 
 /* .picker {
@@ -139,20 +123,12 @@ letter-spacing:4rpx;
   border-radius: 20rpx;
 } */
 
-.ill {
-  height: 200rpx;
-}
-.ath{
-  height: 50rpx;
-}
-
 .ill, .picker, .num {
   margin: 30rpx 40rpx 20rpx 70rpx;
   font-size: 16px;
 }
 
 .ill checkbox {
-  height: 40rpx;
   margin-bottom: 45rpx;
 }
 
@@ -164,15 +140,13 @@ letter-spacing:4rpx;
   margin-right: 50rpx;
 }
 
-.num label {
+.num label{
   margin-right: 200rpx;
 }
-
-.num radio {
-  height: 20rpx;
-  margin-bottom: 45rpx;
+.num radio{
+  margin-bottom:45rpx; 
 }
 
-slider {
+slider{
   margin: 20rpx 70rpx 10rpx 70rpx;
 }

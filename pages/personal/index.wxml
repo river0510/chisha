@@ -10,25 +10,25 @@
       <view class="itemall">
         <view class="item-ans">
           <view class="ope">
-            <button id="del">X</button>
-            <button id="edit">编辑</button>
+            <button id="{{index}}" bindtap='del'>X</button>
+            <button id="{{index}}" class="edit" bindtap='edit'>编辑</button>
           </view>
           <view class="info">
             <view class="a">
-              <image></image>{{item.storeType}}</view>
+              <image></image>{{item.storetype}}</view>
             <view class="a">
-              <image></image>{{item.perNum}}</view>
+              <image></image>{{item.pernum}}</view>
             <view class="a">
               <image></image>{{item.price}}</view>
             <view class="a">
               <image></image>{{item.ath}}</view>
             <view class="a">
-              <image></image>{{item.ill}}</view>
+              <image></image>{{item.illness}}</view>
           </view>
         </view>
       </view>
     </block>
-    <view class="item-ans addbutton">+</view>
+    <view class="item-ans addbutton" bindtap='add'>+</view>
     <view class="titlex">推荐店铺</view>
     <block wx:for="{{items2}}">
       <view class="itemall">

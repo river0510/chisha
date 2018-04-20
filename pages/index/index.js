@@ -4,8 +4,8 @@ Page({
     winHeight: "",//窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
-    condition: []
-
+    condition: { storetype: '', pernum: "", price: "", ath: "", illness: [] },
+    con: ''
   },
   // 滚动切换标签样式
   switchTab: function (e) {
@@ -28,6 +28,9 @@ Page({
   onLoad: function () {
     var that = this;
     //  高度自适应
+    this.setData({
+      con:JSON.stringify(this.data.condition)
+    })
     wx.getSystemInfo({
       success: function (res) {
         var clientHeight = res.windowHeight,
