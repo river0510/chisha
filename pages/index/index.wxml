@@ -11,7 +11,8 @@
     <swiper-item>
       <view class="sw">
         <view class='picclick'>
-          <view class="tip">点击图片开始/停下</view>
+          <view class="tip"  bindtap='taptap'>点击图片开始/停下</view>
+          <view class="mask"></view>
           <swiper current="1" autoplay='true' interval='90' indicator-dots="false" indicator-color="transparent" indicator-active-color='transparent' duration='0'>
             <swiper-item>
               <image src="../../img/store/lyb.jpg" class="slide-image" />
@@ -22,7 +23,7 @@
             <swiper-item>
               <image src="../../img/store/njxd2.jpg" class="slide-image" />
             </swiper-item>
-            <view class="mask"></view>
+            
           </swiper> 
         <navigator url='../storeDetail/index' hover-class="none"><button class="confirm">就吃这个</button></navigator>
         </view>
@@ -59,19 +60,19 @@
             <button class="confirm">就吃这个</button>
           </view>
           <view class='egranking sw2'>
-            <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
+             <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this"> 
               <view class="item-ans">
                 <view class="avatar">
-                  <!-- <image class="img" src="pages/img/logo/allStore.jpg"></image> -->
+                   <image class="img" src="../../img/store/lyb.jpg"></image> 
                 </view>
                 <view class="expertInfo">
                   <view class="name">店名</view>
                   <view class="tag">地址</view>
                   <view class="answerHistory">N人 </view>
                 </view>
-                <navigator url="/pages/askExpert/expertDetail" class="askBtn">￥1</navigator>
+                <navigator url="/pages/askExpert/expertDetail" class="askBtn">99%</navigator>
               </view>
-            </block>
+             </block> 
           </view>
         </view>
       </scroll-view>
