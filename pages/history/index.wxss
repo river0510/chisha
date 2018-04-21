@@ -40,13 +40,13 @@
 .firstName {
   font-size: 18px;
   font-weight: 580;
-  color: #60605f;
+  color: #efb336;
   letter-spacing: 5rpx;
 }
 
 .firstNum {
   font-size: 18px;
-  color: #6bb82c;
+  color: #efb336;
   letter-spacing: 3rpx;
 }
 
@@ -69,7 +69,7 @@
 
 .ranking {
   font-size: 28px;
-  color: #6bb82c;
+  color: #efb336;
   position: absolute;
   margin-top: -32rpx;
   margin-left: 10rpx;
@@ -103,7 +103,7 @@
 
 .times {
   font-size: 15px;
-  color: #6bb82c;
+  color: #efb336;
   margin-right: 20rpx;
 }
 

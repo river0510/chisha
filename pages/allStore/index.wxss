@@ -101,8 +101,8 @@
   text-align: center;
   font-size: 14px;
   border-radius: 60rpx;
-  border: 1px solid #4675f9;
-  color: #4675f9;
+  border: 1px solid #efb336;
+  color: #efb336;
 }
 
 .tab-content {

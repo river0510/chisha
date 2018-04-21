@@ -1,8 +1,4 @@
 <view>
-  <view class="title">
-    <view class="title-text">个人主页</view>
-    <view class="main-line"></view>
-  </view>
 
   <scroll-view scroll-y="true" class="scoll-h">
     <view class="titlex">条件卡片</view>
@@ -29,19 +25,5 @@
       </view>
     </block>
     <view class="item-ans addbutton">+</view>
-    <view class="titlex">推荐店铺</view>
-    <block wx:for="{{items2}}">
-      <view class="itemall">
-        <view class="item-ans item-ans2">
-          <image src="{{item.pic}}"></image>
-          <view class="info2">
-            <view class='name'>{{item.name}}</view>
-            <view class='add'>{{item.add}}</view>
-            <view class='pernum'>{{item.pernum}}</view>
-          </view>
-          <view class="pick">❤</view>
-        </view>
-      </view>
-    </block>
   </scroll-view>
 </view>
