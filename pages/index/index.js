@@ -4,8 +4,7 @@ Page({
     winHeight: "",//窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
-    condition: []
-
+    condition: { storetype: '', pernum: "", price: "", ath: "", illness: [] }
   },
   // 滚动切换标签样式
   switchTab: function (e) {
@@ -24,7 +23,14 @@ Page({
       })
     }
   },
+  editnew:function(){
 
+    console.log("$$$$$$$$$$$$$$$$$$");
+    console.log(this.data.condition);
+    wx.navigateTo({
+      url: '../conditionChocie/index?condition=' + JSON.stringify(this.data.condition),
+    })
+  },
   onLoad: function () {
     var that = this;
     //  高度自适应

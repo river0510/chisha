@@ -24,7 +24,7 @@
             </swiper-item>
             <view class="mask"></view>
           </swiper>
-          <navigator url='../storeDetail/index' hover-class="none">
+          <navigator url='../storeDetail/index?id=0' hover-class="none">
             <button class="confirm">就吃这个</button>
           </navigator>
         </view>
@@ -35,16 +35,21 @@
         <view class='sw'>
           <view class="condition sw2">
             <view class="conpad">
-              <block wx:for="{{condition}}">
+              <!-- <block wx:for="{{condition}}">
                 <view>{{item.con}}</view>
+              </block> -->
+              <view style="display:{{condition.storetype==''?'none':''}}">{{condition.storetype}}</view>
+              <view style="display:{{condition.pernum==''?'none':''}}">{{condition.pernum}}</view>
+              <view style="display:{{condition.price==''?'none':''}}">{{condition.price}}</view>
+              <view style="display:{{condition.ath==''?'none':''}}">{{condition.ath}}</view>
+              <block style="display:{{condition.illness==''?'none':''}}" wx:for="{{condition.illness}}">
+              <view>{{item}}</view>
               </block>
               <view class="ope">
                 <navigator url='../conditioncard/index' hover-class="none" style="width:70rpx;">
                   <view class="card">〓</view>
                 </navigator>
-                <navigator url='../conditionChocie/index' hover-class="none" style="width:140rpx;">
-                  <button class="edit">编辑✎</button>
-                </navigator>
+                  <button class="edit" bindtap='editnew'>编辑✎</button>
               </view>
             </view>
           </view>
@@ -95,5 +100,4 @@
       </scroll-view>
     </swiper-item>
   </swiper>
-
 </view>

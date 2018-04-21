@@ -1,5 +1,6 @@
+<scroll-view class="all" scroll-y="true" class="scoll-h">
   <view class="titlex">条件卡片</view>
-  <view class="yes" bindtap='retopre'>确定</view>
+  <view class="yes" bindtap='retopre'>保存</view>
   <view class="condition">
     <view style="display:{{condition.storetype==''?'none':''}}">{{condition.storetype}}</view>
     <view style="display:{{condition.pernum==''?'none':''}}">{{condition.pernum}}</view>
@@ -14,7 +15,7 @@
     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">场景</view>
     <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">价格</view>
   </scroll-view>
-  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight+50}}rpx">
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight+110}}rpx">
     <swiper-item>
       <scroll-view scroll-y class="scoll-h">
         <view class="titlexx">微信运动统计</view>
@@ -26,6 +27,9 @@
         <view class="tip">你近7天运动量并不多，需要补充XXX维生素balabal，建议选择减肥。</view>
         <view class="titlexxx">锻炼</view>
         <view class="ath picker">
+          <!-- <view>减肥</view>
+        <view>增肥</view>
+        <view class="lastpicker">无所谓</view> -->
           <radio-group class="radio-group" bindchange="radioChange" id="ath">
             <label class="radio" wx:for="{{ath}}">
               <radio value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
@@ -53,9 +57,6 @@
       </view>
       <view class="titlexx">方式</view>
       <view class="type picker">
-        <!-- <view>外卖</view>
-        <view>实体店</view>
-        <view class="lastpicker">无所谓</view> -->
         <radio-group class="radio-group" bindchange="radioChange" id="storetype">
           <label class="radio" wx:for="{{storetype}}">
             <radio value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
@@ -65,6 +66,7 @@
     </swiper-item>
     <swiper-item>
       <view class="titlexx">价格最大值</view>
-      <slider bindchange="slider4change" min="1" max="150" selected-color="#efb336" block-size="19" show-value/>
+      <slider bindchange="slider4change" min="1" max="200" selected-color="#efb336" block-size="19" show-value/>
     </swiper-item>
   </swiper>
+</scroll-view>
