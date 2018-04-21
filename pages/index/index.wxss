@@ -106,9 +106,6 @@
   height: 300rpx;
 }
 
-navigator {
-  width: 30%;
-}
 
 .confirm {
   width: 100%;
@@ -191,7 +188,6 @@ navigator {
 
 .picconfirm .confirm {
   margin-bottom: 30rpx;
-  width: 28%;
   height: 60rpx;
   font-size: 16px;
   margin-top: 35rpx;

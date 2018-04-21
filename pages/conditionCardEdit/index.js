@@ -7,6 +7,8 @@ Page({
     winHeight: "",//窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
+    ifcanvas: "block",
+    stocon:"",
     condition: { storetype: '', pernum: "", price: "", ath: "", illness: [] },
     illness: [
       { name: "经期", value: "经期", checked: false },
@@ -35,7 +37,15 @@ Page({
     this.setData({
       currentTab: e.detail.current
     });
-    // this.checkCor();
+    if (e.detail.current != 0) {
+      this.setData({
+        ifcanvas: "none"
+      })
+    } else {
+      this.setData({
+        ifcanvas: "block"
+      })
+    }
   },
   // 点击标题切换当前页时改变样式
   swichNav: function (e) {
@@ -113,11 +123,38 @@ Page({
   },
 
   retopre: function () {
-    var pages = getCurrentPages();
+    // var pages = getCurrentPages();
+    // var changed = {};
+    // changed['items[' + this.data.condition.id + ']'] = this.data.condition
+    // var prevPage = pages[pages.length - 2];
+    // prevPage.setData(changed)
+    var that=this;
+    // wx.getStorage({
+    //   key: 'stocon',
+    //   success: function (res) {
+    //     console.log("更改缓存数据前：")
+    //     console.log(res.data)
+    //     that.setData({
+    //       stocon:res.data
+    //     })
+    //   }
+    // })
     var changed = {};
-    changed['items[' + this.data.condition.id + ']'] = this.data.condition
-    var prevPage = pages[pages.length - 2];
-    prevPage.setData(changed)
+    changed['stocon[' + this.data.condition.id + ']'] = this.data.condition
+    this.setData(changed)
+    console.log("要写入缓存的数据:")
+    console.log(this.data.stocon);
+    wx.setStorage({
+      key: 'stocon',
+      data: this.data.stocon,
+    })
+    wx.getStorage({
+      key: 'stocon',
+      success: function (res) {
+        console.log("更改缓存数据后：")
+        console.log(res.data)
+      }
+    })
     wx.navigateBack({
       delta: 1
     })
@@ -181,6 +218,17 @@ Page({
     console.log(this.data.ath);
 
     var that = this;
+
+    wx.getStorage({
+      key: 'stocon',
+      success: function (res) {
+        console.log("更改缓存数据前：")
+        console.log(res.data)
+        that.setData({
+          stocon: res.data
+        })
+      }
+    })
 
     //  高度自适应
     wx.getSystemInfo({
