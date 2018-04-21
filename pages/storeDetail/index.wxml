@@ -1,34 +1,26 @@
 <view class="outline">
-  <!-- <view class="ope">
-    <navigator class="back">
-      向左 </navigator>
-        <view>❤</view>
-  </view> -->
   <view class="info">
-    <image class="mainpic" src="../../img/store/njxd2.jpg"></image>
+    <image class="mainpic" src="{{storetemp.img}}"></image>
     <view class="maintitle">
-      <view class="storeName">那间小店</view>
-      <view class="times">吃过N次</view>
+      <view class="storeName">{{storetemp.name}}</view>
+      <view class="times">吃过{{storetemp.picktimes}}次</view>
     </view>
     <view class="otherInfo">
       <view>
-        <image src="../../img/logo/type.png"></image>实体店</view>
+        <image src="../../img/logo/type.png"></image>{{storetemp.storetype}}</view>
       <view>
-        <image src="../../img/logo/phone.png"></image>电话 581355482</view>
+        <image src="../../img/logo/phone.png"></image>电话 {{storetemp.phone}}</view>
       <view>
-        <image src="../../img/logo/address.png"></image>地址 桂庙新村118号</view>
+        <image src="../../img/logo/address.png"></image>地址 {{storetemp.address}}</view>
       <view>
-        <image src="../../img/logo/price.png"></image>人均 36元</view>
+        <image src="../../img/logo/price.png"></image>人均 {{storetemp.price}}元</view>
       <view class="main-line"></view>
       <image src="../../img/logo/food.png"></image>菜式</view>
     <view class="menu">
-      <scroll-view scroll-x="true"  scroll-left="{{scrollLeft}}">
-        <image src="../../img/store/lyb.jpg"></image>
-        <image src="../../img/store/zhss.jpg"></image>
-        <image src="../../img/store/njxd2.jpg"></image>
-        <image src="../../img/store/lyb.jpg"></image>
-        <image src="../../img/store/zhss.jpg"></image>
-        <image src="../../img/store/njxd2.jpg"></image>
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+        <block wx:for="{{storetemp.food}}">
+                <image src="{{item}}"></image>
+        </block>
       </scroll-view>
     </view>
   </view>

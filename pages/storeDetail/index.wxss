@@ -62,12 +62,16 @@ page{
   width:90%;
   background-color: whitesmoke;
 }
-.menu scroll-view{
-  width:90%;
+.menu{
+  width: 520rpx;
   height: 170rpx;
   margin: 30rpx 0 50rpx 0;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
 }
 .menu image{
   width: 170rpx;
-  height: 170rpx;
+  height: 200rpx;
+  margin-right: 10rpx;
 }

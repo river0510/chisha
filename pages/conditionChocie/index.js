@@ -242,6 +242,8 @@ Page({
   },
   onLoad: function (options) {
     var con = JSON.parse(options.condition);
+    console.log("******************");
+    console.log(con);
     var changed = {};
     this.setData({
       condition: con
@@ -271,7 +273,7 @@ Page({
       }
     }
     this.setData(changed)
-    console.log(this.data.ath);
+
     var that = this;
 
     //  高度自适应

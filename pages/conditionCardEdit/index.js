@@ -122,13 +122,18 @@ Page({
       delta: 1
     })
   },
+  slider4change: function (e) {
+    var changed = {};
+    changed['condition.price'] = "￥" + e.detail.value;
+    this.setData(changed);
+  },
   onShow: function () {
     let pageThis = this
     app.deviceInfo.then(function (deviceInfo) {
       console.log('设备信息', deviceInfo)
-      let labels = ["11-01", "11-02", "11-03", "11-04", "11-05", "11-06", "十二月"]
+      let labels = ["11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "今天"]
       let data = [4055, 2545, 9644, 3659, 1640, 3589, 425]
-      let width = 300;
+      let width = 350;
       // let width = Math.floor(deviceInfo.windowWidth - (deviceInfo.windowWidth / 750) * 10 * 2)//canvas宽度
       let height = Math.floor(width / 1.6)//这个项目canvas的width/height为1.6
       let canvasId = 'myCanvas'

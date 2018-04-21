@@ -24,7 +24,7 @@
             </swiper-item>
             <view class="mask"></view>
           </swiper>
-          <navigator url='../storeDetail/index' hover-class="none">
+          <navigator url='../storeDetail/index?id=0' hover-class="none">
             <button class="confirm">就吃这个</button>
           </navigator>
         </view>
@@ -49,9 +49,7 @@
                 <navigator url='../conditioncard/index' hover-class="none" style="width:70rpx;">
                   <view class="card">〓</view>
                 </navigator>
-                <navigator url='../conditionChocie/index?condition={{con}}' hover-class="none" style="width:140rpx;">
-                  <button class="edit">编辑✎</button>
-                </navigator>
+                  <button class="edit" bindtap='editnew'>编辑✎</button>
               </view>
             </view>
           </view>
@@ -101,5 +99,4 @@
       </scroll-view>
     </swiper-item>
   </swiper>
-
 </view>

@@ -1,6 +1,6 @@
 <scroll-view class="all" scroll-y="true" class="scoll-h">
   <view class="titlex">条件卡片</view>
-  <view class="yes" bindtap='retopre'>YES</view>
+  <view class="yes" bindtap='retopre'>保存</view>
   <view class="condition">
     <view style="display:{{condition.storetype==''?'none':''}}">{{condition.storetype}}</view>
     <view style="display:{{condition.pernum==''?'none':''}}">{{condition.pernum}}</view>
@@ -15,14 +15,14 @@
     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">场景</view>
     <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">价格</view>
   </scroll-view>
-  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight+110}}rpx">
     <swiper-item>
       <scroll-view scroll-y class="scoll-h">
         <view class="titlexx">微信运动统计</view>
         <view class="athadd">
-          <!-- <view class="chart-iframe">
-            <canvas disable-scroll="true" style="width:{{myCanvasStyle.width}}px; height: {{myCanvasStyle.height}}px;" bindtouchstart="myCanvasTouchStart" bindtouchmove="myCanvasTouchMove" bindtouchend="myCanvasTouchEnd" canvas-id="myCanvas"></canvas>
-          </view> -->
+          <view class="chart-iframe">
+            <canvas style="width:1000rpx; height:500rpx;" bindtouchstart="myCanvasTouchStart" bindtouchmove="myCanvasTouchMove" bindtouchend="myCanvasTouchEnd" canvas-id="myCanvas"></canvas>
+          </view>
         </view>
         <view class="tip">你近7天运动量并不多，需要补充XXX维生素balabal，建议选择减肥。</view>
         <view class="titlexxx">锻炼</view>
