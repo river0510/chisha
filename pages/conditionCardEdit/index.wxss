@@ -19,6 +19,7 @@ text-align:center;
 letter-spacing:4rpx;
 
 }
+
 .condition {
   padding: 15rpx;
   display: flex;
@@ -44,9 +45,11 @@ letter-spacing:4rpx;
   background-color: transparent;
   border: 0;
 }
-.tab-content{
+
+.tab-content {
   margin-bottom: 60rpx;
 }
+
 .tab-h {
   margin-top: 10rpx;
   height: 100rpx;
@@ -83,15 +86,13 @@ letter-spacing:4rpx;
   left: 5rpx;
   border-radius: 16rpx;
 }
-.swiper{
-  
-}
 
 .titlexx {
   font-size: 17px;
   color: #60605f;
   letter-spacing: 2rpx;
   margin: 60rpx 0 20rpx 70rpx;
+  height: 40rpx;
 }
 
 .titlexxx {
@@ -99,12 +100,14 @@ letter-spacing:4rpx;
   color: #60605f;
   letter-spacing: 2rpx;
   margin: 70rpx 0 40rpx 70rpx;
+  height: 30rpx;
 }
 
 .tip {
   margin: 20rpx 70rpx 10rpx 70rpx;
   font-size: 14px;
   color: #60605f;
+  height: 50rpx;
 }
 
 .athadd {
@@ -136,12 +139,20 @@ letter-spacing:4rpx;
   border-radius: 20rpx;
 } */
 
+.ill {
+  height: 200rpx;
+}
+.ath{
+  height: 50rpx;
+}
+
 .ill, .picker, .num {
   margin: 30rpx 40rpx 20rpx 70rpx;
   font-size: 16px;
 }
 
 .ill checkbox {
+  height: 40rpx;
   margin-bottom: 45rpx;
 }
 
@@ -153,13 +164,15 @@ letter-spacing:4rpx;
   margin-right: 50rpx;
 }
 
-.num label{
+.num label {
   margin-right: 200rpx;
 }
-.num radio{
-  margin-bottom:45rpx; 
+
+.num radio {
+  height: 20rpx;
+  margin-bottom: 45rpx;
 }
 
-slider{
+slider {
   margin: 20rpx 70rpx 10rpx 70rpx;
 }

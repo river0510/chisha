@@ -8,19 +8,19 @@ Page({
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
     ifcanvas:"block",
-    condition: { storetype: '', pernum: "", price: "", ath: "", illness: [] },
+    condition: { storetype: '', pernum: '', price: "", method: '', ath: "", illness: [] },
     illness: [
       { name: "经期", value: "经期" },
       { name: "感冒", value: "感冒" },
+      { name: '肠胃不适', value: '肠胃不适' },
       { name: "牙疼", value: "牙疼" },
       { name: '熬夜', value: '熬夜' },
-      { name: '腹泻', value: '腹泻' },
       { name: '有伤口', value: '有伤口' }],
     ath: [
       { name: "减肥", value: "减肥" },
       { name: "增肥", value: "增肥" },
       { name: "无所谓", value: "无所谓" }],
-    storetype: [
+    method: [
       { name: "外卖", value: "外卖" },
       { name: "实体店", value: "实体店" },
       { name: "无所谓", value: "无所谓" }],
@@ -28,8 +28,13 @@ Page({
       { name: "一人食", value: "一人食" },
       { name: "情侣", value: "情侣" },
       { name: "小聚", value: "小聚" },
-      { name: "超多人", value: "超多人" },
-    ]
+      { name: "超多人", value: "超多人" },],
+    storetype: [
+      { name: "水吧", value: "水吧" },
+      { name: "甜品", value: "甜品" },
+      { name: "早餐", value: "早餐" },
+      { name: "夜宵", value: "夜宵" },
+      { name: "正餐", value: "正餐" }],
   },
   // 滚动切换标签样式
   switchTab: function (e) {
@@ -58,15 +63,6 @@ Page({
       })
     }
   },
-  // addCondition: function (e) {
-  //   var cur = e.target.dataset.current;
-  //   if (this.data.currentTaB == cur) { return false; }
-  //   else {
-  //     this.setData({
-  //       currentTab: cur
-  //     })
-  //   }
-  // },
   radioChange: function (e) {
     //删除同字段的标签
 
@@ -77,12 +73,16 @@ Page({
     else if (e.target.id == "pernum") {
       arr = this.data.pernum
     }
+    else if (e.target.id == "method") {
+      arr = this.data.method
+    }
     else if (e.target.id == "storetype") {
       arr = this.data.storetype
     }
     var checked = e.detail.value
     var changed = {}
     for (var i = 0; i < arr.length; i++) {
+      // console.log(e)
       if (checked.indexOf(arr[i].name) !== -1) {
         changed['arr[' + i + '].checked'] = true;
         var con = this.data.condition;
@@ -91,6 +91,9 @@ Page({
         }
         else if (e.target.id == "pernum") {
           con.pernum = checked;
+        }
+        else if (e.target.id == "method") {
+          con.method = checked;
         }
         else if (e.target.id == "storetype") {
           con.storetype = checked;
@@ -102,7 +105,7 @@ Page({
         })
         console.log(this.data.condition);
       } else {
-        changed['athlete[' + i + '].checked'] = false
+        changed['arr[' + i + '].checked'] = false
       }
     }
     this.setData(changed)
@@ -248,7 +251,7 @@ Page({
   },
   slider4change:function(e){
     var changed={};
-    changed['condition.price'] = "￥"+e.detail.value;
+    changed['condition.price'] = e.detail.value;
     this.setData(changed);
   },
   onLoad: function (options) {
@@ -259,7 +262,7 @@ Page({
     this.setData({
       condition: con
     })
-    var athtemp = this.data.ath, sttemp = this.data.storetype, pntemp = this.data.pernum;
+    var athtemp = this.data.ath, sttemp = this.data.storetype, pntemp = this.data.pernum,mtemp=this.data.method;
     for (var i = 0; i < athtemp.length; i++) {
       console.log(con.ath + " " + athtemp[i].name)
       if (con.ath.indexOf(athtemp[i].name) !== -1) {
@@ -274,6 +277,11 @@ Page({
     for (var i = 0; i < pntemp.length; i++) {
       if (con.pernum.indexOf(pntemp[i].name) != -1) {
         changed['pernum[' + i + '].checked'] = true
+      }
+    }
+    for (var i = 0; i < mtemp.length; i++) {
+      if (con.method.indexOf(mtemp[i].name) != -1) {
+        changed['method[' + i + '].checked'] = true
       }
     }
     for (var j = 0; j < con.illness.length; j++) {

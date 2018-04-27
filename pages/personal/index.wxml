@@ -1,8 +1,8 @@
 <view>
-  <view class="title">
+  <!-- <view class="title">
     <view class="title-text">个人主页</view>
     <view class="main-line"></view>
-  </view>
+  </view> -->
 
   <scroll-view scroll-y="true" class="scoll-h">
     <view class="titlex">条件卡片</view>
@@ -22,6 +22,8 @@
               <image></image>{{item.price}}</view>
             <view class="a">
               <image></image>{{item.ath}}</view>
+            <view class="a">
+              <image></image>{{item.method}}</view>
             <view class="a">
               <image></image>{{item.illness}}</view>
           </view>

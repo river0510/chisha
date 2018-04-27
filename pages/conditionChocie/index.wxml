@@ -1,70 +1,79 @@
-  <view class="titlex">条件卡片</view>
-  <view class="yes" bindtap='retopre'>确定</view>
-  <view class="condition">
-    <view style="display:{{condition.storetype==''?'none':''}}">{{condition.storetype}}</view>
-    <view style="display:{{condition.pernum==''?'none':''}}">{{condition.pernum}}</view>
-    <view style="display:{{condition.price==''?'none':''}}">{{condition.price}}</view>
-    <view style="display:{{condition.ath==''?'none':''}}">{{condition.ath}}</view>
-    <block style="display:{{condition.illness==''?'none':''}}" wx:for="{{condition.illness}}">
-      <view>{{item}}</view>
-    </block>
-  </view>
-  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
-    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">健康</view>
-    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">场景</view>
-    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">价格</view>
-  </scroll-view>
-  <swiper class="tab-content" current="{{currentTab}}" duration="0" bindchange="switchTab" style="height:{{winHeight+50}}rpx">
-    <swiper-item id="1">
-      <scroll-view scroll-y class="scoll-h">
-        <view class="titlexx">微信运动统计</view>
-        <view class="athadd">
-          <view class="chart-iframe">
-            <canvas style="width:1000rpx; height:500rpx;display:{{ifcanvas}}" bindtouchstart="myCanvasTouchStart" bindtouchmove="myCanvasTouchMove" bindtouchend="myCanvasTouchEnd" canvas-id="myCanvas"></canvas>
-          </view>
+<view class="titlex">条件卡片</view>
+<view class="yes" bindtap='retopre'>确定</view>
+<view class="condition">
+  <view style="display:{{condition.storetype==''?'none':''}}">{{condition.storetype}}</view>
+  <view style="display:{{condition.pernum==''?'none':''}}">{{condition.pernum}}</view>
+  <view style="display:{{condition.price==''?'none':''}}">{{condition.price}}</view>
+  <view style="display:{{condition.ath==''?'none':''}}">{{condition.ath}}</view>
+  <view style="display:{{condition.method==''?'none':''}}">{{condition.method}}</view>
+  <block style="display:{{condition.illness==''?'none':''}}" wx:for="{{condition.illness}}">
+    <view>{{item}}</view>
+  </block>
+</view>
+<scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+  <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">健康</view>
+  <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">场景</view>
+  <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">价格</view>
+</scroll-view>
+<swiper class="tab-content" current="{{currentTab}}" duration="0" bindchange="switchTab" style="height:{{winHeight+50}}rpx">
+  <swiper-item id="1">
+    <scroll-view scroll-y class="scoll-h">
+      <view class="titlexx">微信运动统计</view>
+      <view class="athadd">
+        <view class="chart-iframe">
+          <canvas style="width:1000rpx; height:500rpx;display:{{ifcanvas}}" bindtouchstart="myCanvasTouchStart" bindtouchmove="myCanvasTouchMove" bindtouchend="myCanvasTouchEnd" canvas-id="myCanvas"></canvas>
         </view>
-        <view class="tip">你近7天运动量并不多，需要补充XXX维生素balabal，建议选择减肥。</view>
-        <view class="titlexxx">锻炼</view>
-        <view class="ath picker">
-          <radio-group class="radio-group" bindchange="radioChange" id="ath">
-            <label class="radio" wx:for="{{ath}}">
-              <radio value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
-            </label>
-          </radio-group>
-        </view>
-        <view class="titlexxx">病理</view>
-        <view class="ill">
-          <checkbox-group bindchange="checkboxChange">
-            <label class="checkbox" wx:for="{{illness}}">
-              <checkbox value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
-            </label>
-          </checkbox-group>
-        </view>
-      </scroll-view>
-    </swiper-item>
-    <swiper-item id="2">
-      <view class="titlexx">人数</view>
-      <view class="num">
-        <radio-group class="radio-group" bindchange="radioChange" id="pernum">
-          <label class="radio" wx:for="{{pernum}}">
-            <radio value="{{item.value}}" checked="{{item.checked}}" color='#efb336' />{{item.name}}
-          </label>
-        </radio-group>
       </view>
-      <view class="titlexx">方式</view>
-      <view class="type picker">
-        <!-- <view>外卖</view>
-        <view>实体店</view>
-        <view class="lastpicker">无所谓</view> -->
-        <radio-group class="radio-group" bindchange="radioChange" id="storetype">
-          <label class="radio" wx:for="{{storetype}}">
+      <view class="tip">你近7天运动量并不多，需要补充XXX维生素balabal，建议选择减肥。</view>
+      <view class="titlexxx">锻炼</view>
+      <view class="ath picker">
+        <radio-group class="radio-group" bindchange="radioChange" id="ath">
+          <label class="radio" wx:for="{{ath}}">
             <radio value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
           </label>
         </radio-group>
       </view>
-    </swiper-item>
-    <swiper-item id="3">
-      <view class="titlexx">价格最大值</view>
-      <slider bindchange="slider4change" min="1" max="150" selected-color="#efb336" block-size="19" show-value/>
-    </swiper-item>
-  </swiper>
+      <view class="titlexxx">病理</view>
+      <view class="ill">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{illness}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item id="2">
+    <view class="titlexx">人数</view>
+    <view class="num">
+      <radio-group class="radio-group" bindchange="radioChange" id="pernum">
+        <label class="radio" wx:for="{{pernum}}">
+          <radio value="{{item.value}}" checked="{{item.checked}}" color='#efb336' />{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <view class="titlexx">类型</view>
+    <view class="type picker">
+      <!-- <view>外卖</view>
+        <view>实体店</view>
+        <view class="lastpicker">无所谓</view> -->
+      <radio-group class="radio-group" bindchange="radioChange" id="storetype">
+        <label class="radio" wx:for="{{storetype}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view class="titlexx">方式</view>
+    <view class="type picker">
+      <radio-group class="radio-group" bindchange="radioChange" id="method">
+        <label class="radio" wx:for="{{method}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" color='#efb336' />{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+  </swiper-item>
+  <swiper-item id="3">
+    <view class="titlexx">价格最大值</view>
+    <slider bindchange="slider4change" min="1" max="150" selected-color="#efb336" block-size="19" show-value/>
+  </swiper-item>
+</swiper>

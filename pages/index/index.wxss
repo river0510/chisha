@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height:100%;
+  height: 100%;
 }
 
 .picclick {
@@ -69,12 +69,12 @@
 }
 
 .picclick .tip {
-  margin-top: 130rpx;
-  font-size: 13px;
-  color: gray;
-  /* border: 1px solid black; */
+  margin-top: 20rpx;
+  font-size: 11px;
+  color: grey;
   text-align: center;
   margin-bottom: 20rpx;
+  letter-spacing: 3rpx;
 }
 
 .picclick swiper {
@@ -82,12 +82,16 @@
   height: 330rpx;
   overflow: hidden;
   position: relative;
+  margin-top: 196rpx;
 }
+
 .sw2 .picclick swiper {
   width: 300rpx;
   height: 300rpx;
+  margin-top: 0;
 }
-.picclick .mask{
+
+.picclick .mask {
   position: absolute;
   top: 0;
   left: 0;
@@ -101,11 +105,11 @@
   height: 330rpx;
   border-radius: 350rpx;
 }
+
 .sw2 .picclick image {
   width: 300rpx;
   height: 300rpx;
 }
-
 
 .confirm {
   width: 100%;
@@ -225,7 +229,7 @@
   padding-right: 30rpx;
 }
 
-.avatar .img {
+.avatar image {
   width: 100%;
   height: 100%;
 }
@@ -253,7 +257,7 @@
 
 .askBtn {
   width: 100rpx;
-  height:100rpx;
+  height: 100rpx;
   line-height: 95rpx;
   text-align: center;
   font-size: 15px;
@@ -262,6 +266,7 @@
   color: #efb336;
   margin-right: 20rpx;
 }
-.scoll-h{
+
+.scoll-h {
   height: 95%;
 }

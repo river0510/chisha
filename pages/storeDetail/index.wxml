@@ -1,24 +1,25 @@
 <view class="outline">
   <view class="info">
-    <image class="mainpic" src="{{storetemp.img}}"></image>
+    <image class="mainpic" src="{{storetemp.image}}"></image>
+    <view class="pick" bindtap='retopre' bindtap='pick'>喜欢一下</view>
     <view class="maintitle">
       <view class="storeName">{{storetemp.name}}</view>
-      <view class="times">吃过{{storetemp.picktimes}}次</view>
+      <view class="times">吃过{{picktimes}}次</view>
     </view>
     <view class="otherInfo">
       <view>
-        <image src="../../img/logo/type.png"></image>{{storetemp.storetype}}</view>
+        <image src="../../img/logo/type.png"></image>{{storetemp.method}}</view>
       <view>
-        <image src="../../img/logo/phone.png"></image>电话 {{storetemp.phone}}</view>
+        <image src="../../img/logo/phone.png"></image>电话 {{storetemp.tel}}</view>
       <view>
-        <image src="../../img/logo/address.png"></image>地址 {{storetemp.address}}</view>
+        <image src="../../img/logo/address.png"></image>地址 {{storetemp.pos_name}}</view>
       <view>
-        <image src="../../img/logo/price.png"></image>人均 {{storetemp.price}}元</view>
+        <image src="../../img/logo/price.png"></image>人均 {{storetemp.per_price}}元</view>
       <view class="main-line"></view>
       <image src="../../img/logo/food.png"></image>菜式</view>
     <view class="menu">
       <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
-        <block wx:for="{{storetemp.food}}">
+        <block wx:for="{{storetemp.menu_img}}">
                 <image src="{{item}}"></image>
         </block>
       </scroll-view>

@@ -1,29 +1,31 @@
 <view>
-  <view class="title">
-  <view class="title-text">店铺一览</view>
-  <view class="main-line"></view>
-  </view>
+  <!-- <view class="title">
+    <view class="title-text">店铺一览</view>
+    <view class="main-line"></view>
+  </view> -->
   <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
     <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">价格</view>
     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">距离</view>
   </scroll-view>
-  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-    <swiper-item wx:for="{{[0,1]}}">
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight+110}}rpx">
+    <swiper-item>
       <scroll-view scroll-y="true" class="scoll-h">
-        <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
-          <view class="item-ans">
+        <block wx:for="{{priceStoreList}}" wx:key="*this">
+          <view class="item-ans" bindtap='toStoreDetail' id="{{index}}">
             <view class="avatar">
-              <!-- <image class="img" src="pages/img/logo/allStore.jpg"></image> -->
+              <image src="{{item.image}}"></image>
             </view>
             <view class="expertInfo">
-              <view class="name">店名</view>
-              <view class="tag">地址</view>
-              <view class="answerHistory">N人 </view>
+              <view class="name">{{item.name}}</view>
+              <view class="answerHistory">
+                {{item.pos_name}}
+              </view>
             </view>
-            <navigator url="/pages/askExpert/expertDetail" class="askBtn">￥1</navigator>
+            <view class="askBtn">￥{{item.per_price}}</view>
           </view>
         </block>
       </scroll-view>
     </swiper-item>
+    <swiper-item></swiper-item>
   </swiper>
 </view>

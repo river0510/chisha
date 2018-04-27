@@ -26,12 +26,14 @@
 }
 
 .item-ans {
-  width: 92%;
-  height: 300rpx;
-  border: 1px solid #f2f2f2;
-  border-radius: 10rpx;
-  margin: 10rpx;
-  font-size: 14px;
+width:92%;
+height:300rpx;
+border:1px solid #f2f2f2;
+border-radius:20rpx;
+margin:10rpx;
+font-size:14px;
+/* box-shadow:2px 2px 15px silver; */
+
 }
 .info{
   width: 100%;
