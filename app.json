@@ -9,7 +9,8 @@
     "pages/conditionChocie/index",
     "pages/conditioncard/index",
     "pages/line/index",
-    "pages/conditionCardEdit/index"
+    "pages/conditionCardEdit/index",
+    "pages/bdmap/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

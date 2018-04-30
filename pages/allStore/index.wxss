@@ -68,7 +68,7 @@
   padding-right: 30rpx;
 }
 
-.avatar .img {
+.avatar image {
   width: 100%;
   height: 100%;
 }
@@ -100,8 +100,8 @@
   line-height: 60rpx;
   text-align: center;
   font-size: 14px;
-  border-radius: 60rpx;
-  border: 1px solid #efb336;
+  /* border-radius: 60rpx; */
+  /* border: 1px solid #efb336; */
   color: #efb336;
 }
 

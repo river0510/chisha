@@ -1,13 +1,14 @@
-page{
+page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.outline{
-  border:0.5rpx solid whitesmoke;
+
+.outline {
+  border: 0.5rpx solid whitesmoke;
   border-radius: 14rpx;
-  background-color: white; 
-  width:90%;
+  background-color: white;
+  width: 90%;
   height: 98%;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,23 @@ page{
   margin-top: 20rpx;
   box-shadow: 4px 4px 15px gainsboro;
 }
-.info{
+
+.pick {
+  position: absolute;
+  height: 40rpx;
+  width: 130rpx;
+  right: 70rpx;
+  top: 45rpx;
+  font-size: 13px;
+  border: 1px solid seashell;
+  border-radius: 6rpx;
+  padding: 10rpx;
+  color: #efb336;
+  text-align: center;
+  letter-spacing: 3rpx;
+}
+
+.info {
   display: flex;
   width: 80%;
   height: 100%;
@@ -23,55 +40,63 @@ page{
   align-items: flex-start;
   margin-top: 50rpx;
 }
-.mainpic{
+
+.mainpic {
   width: 300rpx;
   height: 300rpx;
   border-radius: 350rpx;
   margin-left: -40rpx;
 }
-.maintitle .storeName{
+
+.maintitle .storeName {
   margin-top: 40rpx;
   font-weight: 100;
   font-size: 21px;
   letter-spacing: 3rpx;
 }
-.maintitle .times{
+
+.maintitle .times {
   font-weight: 200;
   font-size: 16px;
-  color:#efb336;
+  color: #efb336;
   letter-spacing: 3rpx;
   margin-top: 10rpx;
 }
-.otherInfo{
+
+.otherInfo {
   margin-top: 30rpx;
   font-weight: 200;
   font-size: 12px;
   letter-spacing: 1;
 }
 
-.otherInfo image{
+.otherInfo image {
   width: 40rpx;
   height: 40rpx;
 }
-.otherInfo view{
+
+.otherInfo view {
   margin-top: 10rpx;
 }
-.otherInfo .main-line{
-  margin: 30rpx 0 30rpx 0; 
+
+.otherInfo .main-line {
+  margin: 30rpx 0 30rpx 0;
   height: 1rpx;
-  width:90%;
+  width: 90%;
   background-color: whitesmoke;
 }
-.menu{
+
+.menu {
   width: 520rpx;
   height: 170rpx;
   margin: 30rpx 0 50rpx 0;
-  display:inline-block;
-  overflow:hidden;
-  white-space:nowrap;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.menu image{
-  width: 170rpx;
-  height: 200rpx;
+
+.menu image {
+  width: 240rpx;
+  height: 180rpx;
   margin-right: 10rpx;
 }

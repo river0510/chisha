@@ -6,7 +6,7 @@
   height: 70rpx;
   border-bottom: 0.1rpx solid gainsboro;
   background-color: white;
-  z-index: 99; 
+  z-index: 99;
 }
 
 .title-text {
@@ -30,7 +30,7 @@
 
 .firstPick .imgs {
   position: absolute;
-  top: 140rpx;
+  top: 143rpx;
   width: 210rpx;
   height: 210rpx;
   border: 1px solid black;
@@ -68,11 +68,11 @@
 }
 
 .ranking {
-  font-size: 28px;
+  font-size: 20px;
   color: #efb336;
   position: absolute;
-  margin-top: -32rpx;
-  margin-left: 10rpx;
+  margin-top: 15rpx;
+  margin-left: 17rpx;
 }
 
 .space {
