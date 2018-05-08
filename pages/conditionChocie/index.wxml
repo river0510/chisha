@@ -74,6 +74,6 @@
   </swiper-item>
   <swiper-item id="3">
     <view class="titlexx">价格最大值</view>
-    <slider bindchange="slider4change" min="1" max="150" selected-color="#efb336" block-size="19" show-value/>
+    <slider bindchange="slider4change" min="1" max="150" selected-color="#efb336" block-size="23" show-value/>
   </swiper-item>
 </swiper>

@@ -1,31 +1,31 @@
 <view>
-  <!-- <view class="title">
-    <view class="title-text">店铺一览</view>
-    <view class="main-line"></view>
-  </view> -->
-  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+
+  <!-- <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
     <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">价格</view>
-    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">距离</view>
+     <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">距离</view> 
   </scroll-view>
   <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight+110}}rpx">
-    <swiper-item>
-      <scroll-view scroll-y="true" class="scoll-h">
-        <block wx:for="{{priceStoreList}}" wx:key="*this">
-          <view class="item-ans" bindtap='toStoreDetail' id="{{index}}">
-            <view class="avatar">
-              <image src="{{item.image}}"></image>
-            </view>
-            <view class="expertInfo">
-              <view class="name">{{item.name}}</view>
-              <view class="answerHistory">
-                {{item.pos_name}}
-              </view>
-            </view>
-            <view class="askBtn">￥{{item.per_price}}</view>
+    <swiper-item> -->
+  <scroll-view scroll-y="true" class="scoll-h">
+    <view class="title">
+      <view class="title-text">——————— 按价格排序 ———————</view>
+    </view>
+    <block wx:for="{{priceStoreList}}" wx:key="*this">
+      <view class="item-ans" bindtap='toStoreDetail' id="{{index}}">
+        <view class="avatar">
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class="expertInfo">
+          <view class="name">{{item.name}}</view>
+          <view class="answerHistory">
+            {{item.pos_name}}
           </view>
-        </block>
-      </scroll-view>
-    </swiper-item>
-    <swiper-item></swiper-item>
-  </swiper>
+        </view>
+        <view class="askBtn">￥{{item.per_price}}</view>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- </swiper-item>
+    <swiper-item></swiper-item> -->
+  <!-- </swiper> -->
 </view>

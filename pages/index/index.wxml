@@ -23,7 +23,7 @@
             </swiper-item>
             <view class="mask"></view>
           </swiper>
-          <!-- <navigator url='../storeDetail/index?id=0' hover-class="none" style='width:200rpx;'> -->
+          <!-- <navigator url='../storeDetail/index?id=0' hover-class="none" st yle='width:200rpx;'> -->
           <button class="confirm" bindtap="getrandomStore" style='width:30%'>STOP</button>
 
           <view class="tip">点击按钮弹出店铺</view>

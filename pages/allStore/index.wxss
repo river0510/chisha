@@ -1,19 +1,21 @@
 .title {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70rpx;
-  border-bottom: 0.1rpx solid gainsboro;
-    background-color: white;
-  z-index: 99; 
+  height: 50rpx;
+  /* margin-left: 80rpx; */
+  margin-top: 30rpx;
+  font-family: "微软雅黑";
+  text-align: center;
 }
+
 .title-text {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  /* letter-spacing: 3rpx; */
+  color: grey;
 }
 
 .tab-h {
-  margin-top: 10rpx; 
+  margin-top: 10rpx;
   height: 100rpx;
   width: 100%;
   box-sizing: border-box;
@@ -50,27 +52,35 @@
 }
 
 .item-ans {
-  width: 100%;
+  width: 84%;
   display: flex;
   flex-grow: row no-wrap;
-  justify-content: space-between;
-  padding: 30rpx;
+  justify-content: center;
   box-sizing: border-box;
-  height: 180rpx;
+  height: 200rpx;
   align-items: center;
   border-bottom: 1px solid #f2f2f2;
+  margin: auto;
+  margin-top: 15rpx;
+  box-shadow: 3px 3px 40px whitesmoke;
+  background-color: white;
+  /* border: 1px solid whitesmoke; */
+  border-radius: 9rpx;
 }
 
 .avatar {
-  width: 100rpx;
-  height: 100rpx;
+  width: 195rpx;
+  height: 196rpx;
   position: relative;
-  padding-right: 30rpx;
+  margin-right: 30rpx;
+  background-color: #f9f6e8;
+  border-radius: 6px 0 0 6px;
 }
 
 .avatar image {
   width: 100%;
   height: 100%;
+  border-radius: 6px 0 0 6px;
 }
 
 .avatar .doyen {
@@ -82,16 +92,20 @@
 }
 
 .expertInfo {
-  font-size: 12px;
+  font-size: 11px;
   flex-grow: 2;
   color: #b0b0b0;
   line-height: 1.5em;
+  font-weight: 200;
+  letter-spacing: 2rpx;
+  /* margin-top: -40rpx; */
 }
 
 .expertInfo .name {
-  font-size: 16px;
+  font-size: 17px;
   color: #000;
   margin-bottom: 6px;
+  font-weight: 200;
 }
 
 .askBtn {
@@ -99,10 +113,11 @@
   height: 60rpx;
   line-height: 60rpx;
   text-align: center;
-  font-size: 14px;
-  /* border-radius: 60rpx; */
-  /* border: 1px solid #efb336; */
+  font-size: 16px;
+  font-weight: 200;
+  /* border-radius: 60rpx; *//* border: 1px solid #efb336; */
   color: #efb336;
+  margin-right: 7rpx;
 }
 
 .tab-content {

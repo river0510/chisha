@@ -3,27 +3,35 @@
     <view class="title-text">历史手账</view>
     <view class="main-line"></view>
   </view> -->
-    <view class="firstPick" style="display:{{pickhistoryStoreList.length!=0?'':'none'}}">
-      <image class="imgs" src="{{pickhistoryStoreList[0].image}}"></image>
-      <image class="img" src="../../img/else/hc.png"></image>
-      <view class="firstName">{{pickhistoryStoreList[0].name}}</view>
-      <view class="firstNum">吃过{{pickStoreList[0].picktimes}}次</view>
+  <view class="firstPick" style="display:{{pickhistoryStoreList.length!=0?'':'none'}}">
+      <view class="cblock"><image src='https://i.loli.net/2018/05/08/5af08e62db16c.png' style="width:80rpx;height:80rpx"></image></view>  
+    <image class="imgs" src="{{pickhistoryStoreList[0].image}}"></image>
+    <view class="img"></view>
+    <view class="firstName">{{pickhistoryStoreList[0].name}}
+      <view class="firstNum">
+        <image class="heart" src="https://i.loli.net/2018/05/07/5af01a2e3e1f3.png"></image>
+        {{pickStoreList[0].picktimes}}
+      </view>
     </view>
-     <view class="firstPick" style="display:{{pickhistoryStoreList.length==0?'':'none'}}">
+  </view>
+  <view class="firstPick" style="display:{{pickhistoryStoreList.length==0?'':'none'}}">
     还没有喜欢过任何餐厅哦
-    </view> 
-    <view class="itemall">
-      <block wx:for="{{pickhistoryStoreList}}">
-        <view wx:if="{{index > 0}}" class="item-ans">
-          <view class="ranking"  style="display:{{pickhistoryStoreList.length!=0?'':'none'}}">{{index+1}}</view>
-          <view class='space'></view>
-          <image class="img " src="{{item.image}}"></image>
-          <view class="expertInfo ">
-            <view class="name ">{{item.name}}</view>
-            <view class="add">{{item.pos_name}}</view>
-          </view>
-          <view class="times "><text>吃过\n{{pickStoreList[index].picktimes}}次</text></view>
+  </view>
+  <view class="itemall">
+    <block wx:for="{{pickhistoryStoreList}}">
+      <view wx:if="{{index > 0}}" class="item-ans">
+        <view class="ranking" style="display:{{pickhistoryStoreList.length!=0?'':'none'}}">{{index+1}}</view>
+        <view class='space'></view>
+        <image class="img " src="{{item.image}}"></image>
+        <view class="expertInfo ">
+          <view class="name ">{{item.name}}</view>
+          <view class="add">{{item.pos_name}}</view>
         </view>
-      </block>
-    </view>
+        <view class="times ">
+          <image class="heart" src="https://i.loli.net/2018/05/07/5af01a2e3e1f3.png"></image>
+          <view class='text'>{{pickStoreList[index].picktimes}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>

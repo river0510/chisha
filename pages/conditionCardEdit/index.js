@@ -178,10 +178,20 @@ Page({
   },
   onShow: function () {
     let pageThis = this
+    var runData = wx.getStorageSync("run");
+    console.log(runData);
+    let labels = ["11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "今天"]
+    let data = [4055, 2545, 9644, 3659, 1640, 3589, 425]
+
+    for (var i = 6; i > 0; i--) {
+      var date = new Date(runData.stepInfoList[24 + i].timestamp * 1000)
+      console.log(date)
+      labels[i] = date.getMonth() + 1 + "." + date.getDate();
+      data[i] = runData.stepInfoList[24 + i].step;
+    }
     app.deviceInfo.then(function (deviceInfo) {
       console.log('设备信息', deviceInfo)
-      let labels = ["11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "今天"]
-      let data = [4055, 2545, 9644, 3659, 1640, 3589, 425]
+
       let width = 350;
       // let width = Math.floor(deviceInfo.windowWidth - (deviceInfo.windowWidth / 750) * 10 * 2)//canvas宽度
       let height = Math.floor(width / 1.6)//这个项目canvas的width/height为1.6
