@@ -19,17 +19,21 @@ page {
 
 .pick {
   position: absolute;
-  height: 40rpx;
-  width: 130rpx;
-  right: 70rpx;
-  top: 45rpx;
-  font-size: 13px;
-  border: 1px solid seashell;
+  height: 50rpx;
+  width: 48rpx;
+  right: 73rpx;
+  top: 70rpx;
+  font-size: 12px;
+  font-weight: 200;
   border-radius: 6rpx;
   padding: 10rpx;
   color: #efb336;
   text-align: center;
   letter-spacing: 3rpx;
+}
+.heart{
+  height: 50rpx;
+  width: 50rpx;
 }
 
 .info {
@@ -46,6 +50,7 @@ page {
   height: 300rpx;
   border-radius: 350rpx;
   margin-left: -40rpx;
+  background-color: #fefcf7;
 }
 
 .maintitle .storeName {
@@ -66,17 +71,21 @@ page {
 .otherInfo {
   margin-top: 30rpx;
   font-weight: 200;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 1;
 }
 
 .otherInfo image {
   width: 40rpx;
   height: 40rpx;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
 }
 
 .otherInfo view {
-  margin-top: 10rpx;
+  margin-top: 15rpx;
+  display: flex;
+  flex-wrap:nowrap;
 }
 
 .otherInfo .main-line {

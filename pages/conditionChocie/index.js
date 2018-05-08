@@ -7,7 +7,7 @@ Page({
     winHeight: "",//窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
-    ifcanvas:"block",
+    ifcanvas: "block",
     condition: { storetype: '', pernum: '', price: "", method: '', ath: "", illness: [] },
     illness: [
       { name: "经期", value: "经期" },
@@ -41,16 +41,16 @@ Page({
     this.setData({
       currentTab: e.detail.current
     });
-    if (e.detail.current!=0){
+    if (e.detail.current != 0) {
       this.setData({
-        ifcanvas:"none"
+        ifcanvas: "none"
       })
-    }else {
+    } else {
       this.setData({
         ifcanvas: "block"
       })
     }
-    console.log(e.detail.current+" "+this.data.ifcanvas)
+    console.log(e.detail.current + " " + this.data.ifcanvas)
     // this.checkCor();
   },
   // 点击标题切换当前页时改变样式
@@ -231,10 +231,21 @@ Page({
   },
   onShow: function () {
     let pageThis = this
+    var runData = wx.getStorageSync("run");
+    console.log(runData);
+    let labels = ["11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "今天"]
+    let data = [4055, 2545, 9644, 3659, 1640, 3589, 425]
+    for (var i = 6; i >0; i--) {
+      var j=i+24;
+      var rd=runData.stepInfoList[j].timestamp * 1000;
+      var date = new Date(rd)
+      console.log(date)
+      labels[i] = date.getMonth()+1+ "." + date.getDate();
+      data[i] = runData.stepInfoList[j].step;
+    }
+
     app.deviceInfo.then(function (deviceInfo) {
       console.log('设备信息', deviceInfo)
-      let labels = ["11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "今天"]
-      let data = [4055, 2545, 9644, 3659, 1640, 3589, 425]
       let width = 350;
       // let width = Math.floor(deviceInfo.windowWidth - (deviceInfo.windowWidth / 750) * 10 * 2)//canvas宽度
       let height = Math.floor(width / 1.6)//这个项目canvas的width/height为1.6
@@ -249,8 +260,8 @@ Page({
 
     })
   },
-  slider4change:function(e){
-    var changed={};
+  slider4change: function (e) {
+    var changed = {};
     changed['condition.price'] = e.detail.value;
     this.setData(changed);
   },
@@ -262,7 +273,7 @@ Page({
     this.setData({
       condition: con
     })
-    var athtemp = this.data.ath, sttemp = this.data.storetype, pntemp = this.data.pernum,mtemp=this.data.method;
+    var athtemp = this.data.ath, sttemp = this.data.storetype, pntemp = this.data.pernum, mtemp = this.data.method;
     for (var i = 0; i < athtemp.length; i++) {
       console.log(con.ath + " " + athtemp[i].name)
       if (con.ath.indexOf(athtemp[i].name) !== -1) {
@@ -313,7 +324,7 @@ Page({
     //   success: function (res) {
     //     if (res.code) {
     //       //发起网络请求
-    //       wx.request({
+    //       wx.request({ 
     //         url: 'https://test.com/onLogin',
     //         data: {
     //           code: res.code

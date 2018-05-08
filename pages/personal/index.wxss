@@ -13,6 +13,53 @@
   font-size: 15px;
 }
 
+.firstPick {
+  width: 100%;
+  height: 270rpx;
+  margin: 40rpx 0 25rpx 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.firstPick .colorblock {
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 15%;
+  background-color: #efcc3c;
+}
+
+.firstPick .img {
+  position: relative;
+  width: 190rpx;
+  height: 190rpx;
+   z-index: 99; 
+   margin-top: -2rpx; 
+  border: 1px solid whitesmoke;
+  /* background-color: #efcc3c; */
+  border-radius: 300rpx;
+}
+
+.firstPick .imgs {
+  /* position: absolute; */
+  z-index: 99;
+  top: 40rpx;
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 400rpx;
+  background-color: white;
+  /* border: 1px solid whitesmoke; */
+}
+
+.firstName {
+  font-size: 13px;
+  font-weight: 200;
+  color: black;
+  margin-top: 10rpx;
+}
+
 .titlex {
   font-size: 19px;
   color: #60605f;
@@ -31,12 +78,16 @@
   border: 1px solid #f2f2f2;
   border-radius: 10rpx;
   margin: 10rpx;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 200;
+  box-shadow: 3px 3px 40px whitesmoke;
+  padding-bottom: 35rpx;
 }
 .info{
   width: 100%;
   display: flex;
   flex-flow: row wrap;
+  margin-top: 5rpx;
 }
 .info image{
   width:50rpx;
@@ -44,7 +95,7 @@
   margin-right: 10rpx;
 }
 .info view{
-  margin-top: 4rpx;
+  margin-top: 10rpx;
   margin-left: 40rpx;
   width: 40%;
   height: 65rpx;
@@ -54,25 +105,28 @@
   flex-flow: row nowrap;
   justify-content: flex-end; */
 
-  background-color: #efb336;
-  height: 65rpx;
+  background-color: #efcc3c;
+  height: 90rpx;
   width: 100%;
   border-radius: 10rpx 10rpx 0 0;
 }
-.ope button{
+.ope view{
   float: right;
   margin: 7rpx 15rpx 15rpx 0;
   width:120rpx;
-  height: 50rpx;
-  background-color: transparent;
-  border-radius: 3rpx;
-  font-size: 13px;
+  height: 60rpx;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 4rpx;
   color: whitesmoke;
   line-height: 2;
+  margin-top: 15rpx;
+  background-color:#e5c53e;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-right: 15rpx;
 }
-#del{
-  width: 80rpx;
-}
+
 .addbutton{
   margin-left: 29rpx;
   height: 100rpx;
@@ -81,6 +135,7 @@
   align-items: center;
   font-size: 22px;
   color: gray;
+  padding-bottom: 0;
 }
 
 .item-ans2{

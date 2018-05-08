@@ -4,34 +4,40 @@
     <view class="main-line"></view>
   </view> -->
 
-  <scroll-view scroll-y="true" class="scoll-h">
+  <scroll-view class="all" scroll-y="true" class="scoll-h">
+    <view class="firstPick">
+      <view class="colorblock"></view>
+      <image class="imgs" src="{{au}}"></image>
+      <!-- <view class="img"></view> -->
+      <view class="firstName">{{nn}}</view>
+    </view>
     <view class="titlex">条件卡片</view>
     <block wx:for="{{items}}">
       <view class="itemall">
         <view class="item-ans">
           <view class="ope">
-            <button id="{{index}}" bindtap='del'>X</button>
-            <button id="{{index}}" class="edit" bindtap='edit'>编辑</button>
+            <view id="{{index}}" class="del" bindtap='del'>删除</view>
+            <view id="{{index}}" class="edit" bindtap='edit'>编辑</view>
           </view>
           <view class="info">
-            <view class="a">
+            <view class="a" style="display:{{item.storetype==''?'none':''}}">
               <image></image>{{item.storetype}}</view>
-            <view class="a">
+            <view class="a" style="display:{{item.pernum==''?'none':''}}">
               <image></image>{{item.pernum}}</view>
-            <view class="a">
-              <image></image>{{item.price}}</view>
-            <view class="a">
+            <view class="a" style="display:{{item.price==''?'none':''}}">
+              <image></image>￥{{item.price}}</view>
+            <view class="a" style="display:{{item.ath==''?'none':''}}">
               <image></image>{{item.ath}}</view>
-            <view class="a">
+            <view class="a" style="display:{{item.method==''?'none':''}}">
               <image></image>{{item.method}}</view>
-            <view class="a">
+            <view class="a" style="display:{{item.illness==''?'none':''}}">
               <image></image>{{item.illness}}</view>
           </view>
         </view>
       </view>
     </block>
     <view class="item-ans addbutton" bindtap='add'>+</view>
-    <view class="titlex">推荐店铺</view>
+    <!-- <view class="titlex">推荐店铺</view>
     <block wx:for="{{items2}}">
       <view class="itemall">
         <view class="item-ans item-ans2">
@@ -44,6 +50,6 @@
           <view class="pick">❤</view>
         </view>
       </view>
-    </block>
+    </block> -->
   </scroll-view>
 </view>

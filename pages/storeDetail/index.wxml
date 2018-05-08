@@ -1,28 +1,41 @@
 <view class="outline">
   <view class="info">
     <image class="mainpic" src="{{storetemp.image}}"></image>
-    <view class="pick" bindtap='retopre' bindtap='pick'>喜欢一下</view>
+    <view class="pick" bindtap='retopre' bindtap='pick'>
+      <image class="heart" src="{{heartpic}}"></image>合意</view>
     <view class="maintitle">
       <view class="storeName">{{storetemp.name}}</view>
       <view class="times">吃过{{picktimes}}次</view>
     </view>
     <view class="otherInfo">
       <view>
-        <image src="../../img/logo/type.png"></image>{{storetemp.method}}</view>
+        <image src="../../img/logo/type.png"></image>
+        <view>{{storetemp.method}}</view>
+      </view>
       <view>
-        <image src="../../img/logo/phone.png"></image>电话 {{storetemp.tel}}</view>
+        <image src="../../img/logo/phone.png"></image>
+        <view>电话 {{storetemp.tel}}</view>
+      </view>
       <view>
-        <image src="../../img/logo/address.png"></image>地址 {{storetemp.pos_name}}</view>
+        <image src="../../img/logo/address.png"></image>
+        <view>地址 {{storetemp.pos_name}}</view>
+      </view>
       <view>
-        <image src="../../img/logo/price.png"></image>人均 {{storetemp.per_price}}元</view>
+        <image src="../../img/logo/price.png"></image>
+        <view>人均 {{storetemp.per_price}}元</view>
+      </view>
       <view class="main-line"></view>
-      <image src="../../img/logo/food.png"></image>菜式</view>
-    <view class="menu">
-      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
-        <block wx:for="{{storetemp.menu_img}}">
-                <image src="{{item}}"></image>
-        </block>
-      </scroll-view>
+      <view>
+        <image src="../../img/logo/food.png"></image>
+        <view>菜式</view>
+      </view>
+      <view class="menu">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+          <block wx:for="{{storetemp.menu_img}}">
+            <image src="{{item}}" style="display:{{item==''?'none':''}}"></image>
+          </block>
+        </scroll-view>
+      </view>
     </view>
   </view>
 </view>

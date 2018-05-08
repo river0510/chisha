@@ -199,7 +199,6 @@ Page({
         wx.login({
           success: function (res) {
             var code = res.code;
-            
             getRunData(null, code);
           },
           fail: function (res) { },
@@ -234,6 +233,7 @@ var getRunData = function (session_key, code){
             method: 'POST',
             success: function (res) {
               wx.setStorageSync('run', res.data.data)
+              console.log(res.data)
               wx.setStorageSync('session_key', res.data.session_key)
             },
             fail: function (res) { },
