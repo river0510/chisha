@@ -190,27 +190,18 @@ Page({
   footerTap: app.footerTap,
 
   getWeRun: function () {
-    wx.checkSession({
-      success: function(res) {
-        var session_key = wx.getStorageSync('session_key')
-        getRunData(session_key);
+    wx.login({
+      success: function (res) {
+        var code = res.code;
+        getRunData(code);
       },
-      fail: function(res) {
-        wx.login({
-          success: function (res) {
-            var code = res.code;
-            getRunData(null, code);
-          },
-          fail: function (res) { },
-          complete: function (res) { },
-        })
-      },
-      complete: function(res) {},
+      fail: function (res) { },
+      complete: function (res) { },
     })
   }
 })
 
-var getRunData = function (session_key, code){
+var getRunData = function (code){
   // console.log(1)
   wx.authorize({
     scope: 'scope.werun',
@@ -222,7 +213,7 @@ var getRunData = function (session_key, code){
           var encryptedData = res.encryptedData;
           var body = {
             iv: iv,
-            session_key: session_key,
+            // session_key: session_key,
             code: code,
             encryptedData: encryptedData
           }
@@ -234,7 +225,7 @@ var getRunData = function (session_key, code){
             success: function (res) {
               wx.setStorageSync('run', res.data.data)
               console.log(res.data)
-              wx.setStorageSync('session_key', res.data.session_key)
+              // wx.setStorageSync('session_key', res.data.session_key)
             },
             fail: function (res) { },
             complete: function (res) { },
